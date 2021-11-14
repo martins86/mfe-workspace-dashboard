@@ -12,7 +12,10 @@
     "prettier-write": "npx prettier --write --ignore-unknown .",
     "prettier-check": "npx prettier --check .",
     "pre-commit": "npx --no-install lint-staged && npm run lint && npm run test",
-    "postinstall": "npx husky install"
+    "postinstall": "npx husky install",
+    "serve:dashboard": "ng serve --project=dashboard --port=5001 --host=0.0.0.0 --disable-host-check --open",
+    "test:dev": "ng test --code-coverage --progress --browsers Chrome",
+    "build:dashboard": "ng build --project=dashboard --base-href ./ --single-bundle=true --output-hashing=none --vendor-chunk=false --aot"
   },
   "private": true,
   "dependencies": {
