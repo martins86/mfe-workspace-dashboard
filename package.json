@@ -6,11 +6,13 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
+    "test": "ng test --no-watch --no-progress --code-coverage --browsers ChromeHeadlessNoSandbox",
     "lint": "ng lint",
     "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js",
     "prettier-write": "npx prettier --write --ignore-unknown .",
-    "prettier-check": "npx prettier --check ."
+    "prettier-check": "npx prettier --check .",
+    "pre-commit": "npx --no-install lint-staged && npm run lint && npm run test",
+    "postinstall": "npx husky install"
   },
   "private": true,
   "dependencies": {
