@@ -70,7 +70,9 @@ ng g @angular-eslint/schematics:app dashboard --routing=true --strict=true --sty
 
 ```sh
 ## Instalando o ngx build plus e o module federation
-npm install ngx-build-plus @angular-architects/module-federation @angular-architects/module-federation-tools
+npm install ngx-build-plus@12.2.0
+npm install @angular-architects/module-federation@12.5.3
+npm install @angular-architects/module-federation-tools@12.5.3
 ```
 
 ```sh
