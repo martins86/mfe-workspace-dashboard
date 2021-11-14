@@ -1,27 +1,37 @@
-# MfeWorkspaceDashboard
+# Micro Front-end: Dashboard [![Build Status](https://app.travis-ci.com/martins86/mfe-workspace-dashboard.svg?token=ifxsnzyowyXksHqjSXVp&branch=master)](https://app.travis-ci.com/martins86/mfe-workspace-dashboard)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.13.
+## Informações
 
-## Development server
+Angular - [Link](https://angular.io/) <br />
+Angular Module Federation - [Angular Architects](https://www.angulararchitects.io/en/aktuelles/the-microfrontend-revolution-part-2-module-federation-with-angular/) - [Npmjs](https://www.npmjs.com/package/@angular-architects/module-federation-tools/v/12.4.0) <br />
+ESLint builder - [Link](https://github.com/angular-eslint/angular-eslint) <br />
+Prettier - [Link](https://prettier.io/) <br />
+Lint Staged - [Link](https://github.com/okonet/lint-staged#readme) <br />
+Husky - [Link](https://typicode.github.io/husky/#/) <br />
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+<br>
 
-## Code scaffolding
+## Dependências Globais
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```sh
+## Instalando o Angular Global
+npm install -g @angular/cli@12.2.13
+```
 
-## Build
+<br>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Comandos Usados
 
-## Running unit tests
+```sh
+## Criando workspace do dashboard
+ng new mfe-workspace-dashboard --create-application=false --commit=true --prefix=mfe
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```sh
+## Acessando o workspace
+cd mfe-workspace-dashboard
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Adicionando eslint e incluindo no cli angular.json
+ng add @angular-eslint/schematics
+ng config cli.defaultCollection @angular-eslint/schematics
+```
