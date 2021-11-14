@@ -154,6 +154,22 @@ npm set-script prettier-check "npx prettier --check ."
 ```
 
 ```sh
+## Criando o .lintstagedrc.json
+{
+  "*.{js,jsx,ts,tsx,md,html,scss,json}": [
+    "npm run prettier-write",
+    "git add",
+    "npm run prettier-check"
+  ]
+}
+```
+
+```sh
+## Adicionando o Lint Staged
+npm install lint-staged --save-dev
+```
+
+```sh
 ## Adicionando o Husky
 npm install husky --save-dev
 npx husky install
@@ -175,22 +191,6 @@ npm set-script serve:dashboard "ng serve --project=dashboard --port=5001 --host=
 npm set-script test:dev "ng test --code-coverage --progress --browsers Chrome"
 npm set-script build:dashboard "ng build --project=dashboard --base-href ./ --single-bundle=true --output-hashing=none --vendor-chunk=false --aot"
 
-```
-
-```sh
-## Criando o .lintstagedrc.json
-{
-  "*.{js,jsx,ts,tsx,md,html,scss,json}": [
-    "npm run prettier-write",
-    "git add",
-    "npm run prettier-check"
-  ]
-}
-```
-
-```sh
-## Adicionando o Lint Staged
-npm install lint-staged --save-dev
 ```
 
 ```sh
