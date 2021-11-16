@@ -257,3 +257,9 @@ deploy:
   on:
     branch: master
 ```
+
+```sh
+## Adicionando o modulo, rotas e component do página dashboard
+ng g m pages/dashboard/ --module app --routing --project dashboard
+ng g c pages/dashboard/ --project dashboard
+```

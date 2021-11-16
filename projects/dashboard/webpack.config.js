@@ -26,7 +26,8 @@ module.exports = {
       name: 'dashboard',
       filename: 'remoteEntry.js',
       exposes: {
-        './AppModule': './projects/dashboard/src/app/app.module.ts',
+        './DashboardModule':
+          './projects/dashboard/src/app/pages/dashboard/dashboard.module.ts',
       },
       shared: share({
         '@angular/core': {
