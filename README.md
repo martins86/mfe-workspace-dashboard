@@ -128,6 +128,7 @@ captureTimeout: 210000,
 build
 coverage
 node_modules
+dist
 
 # Criando o .prettierrc.json
 {
