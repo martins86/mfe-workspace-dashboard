@@ -260,6 +260,36 @@ deploy:
 ```
 
 ```sh
+## Adicionando o sonar no projeto
+# Acesse o https://sonarcloud.io entre com sua conta do github [ara acesso aos projetos
+https://sonarcloud.io
+
+# Crie a empresa e adicione o repositório desejado, logo após ele executara um scan, finalizando o scan acesse o information para obter as keys do projeto
+https://sonarcloud.io/project/information?id=martins86_mfe-workspace-dashboard
+
+
+# Adicionando sonar-project.properties
+sonar.host.url=https://sonarcloud.io
+sonar.organization=martins86
+sonar.projectName=martins86_mfe-workspace-dashboard
+sonar.projectKey=martins86_mfe-workspace-dashboard
+sonar.sources=.
+sonar.inclusions=projects/dashboard/src/**/*
+sonar.test.inclusions=**/*.spec.js
+sonar.test.exclusions=
+sonar.javascript.lcov.reportPaths=coverage/dashboard/lcov.info
+```
+
+```sh
+## Adicionando o reporter icov no karma.conf.js
+reporters: [
+  { type: 'html' },
+  { type: 'text-summary' },
+  { type: 'lcov', subdir: './' },
+],
+```
+
+```sh
 ## Adicionando o modulo, rotas e component do página dashboard
 ng g m pages/dashboard/ --module app --routing --project dashboard
 ng g c pages/dashboard/ --project dashboard
