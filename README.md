@@ -271,20 +271,23 @@ https://sonarcloud.io/project/information?id=martins86_mfe-workspace-dashboard
 # Adicionando sonar-project.properties
 sonar.host.url=https://sonarcloud.io
 sonar.organization=martins86
+sonar.projectVersion=1.0
 sonar.projectName=martins86_mfe-workspace-dashboard
 sonar.projectKey=martins86_mfe-workspace-dashboard
 
-sonar.sources=.
 sonar.sourceEncoding=UTF-8
+sonar.sources=.
 
-sonar.inclusions=projects/dashboard/src/app/**/*
-sonar.test.inclusions=**/*.spec.js
-sonar.exclusions=**/node_modules/**,**/*.spec.ts
+sonar.exclusions=**/node_modules/**
+sonar.coverage.exclusions=**/*.js,src/main.ts,src/polyfills.ts,**/*environment*.ts,**/*module.ts
 
 sonar.tests=.
+sonar.test.inclusions=**/*.spec.ts,**/*test.ts
 
 sonar.ts.tslint.configPath=tslint.json
+
 sonar.typescript.lcov.reportPaths=coverage/dashboard/lcov.info
+
 ```
 
 ```sh
