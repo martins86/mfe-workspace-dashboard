@@ -25,8 +25,10 @@ module.exports = function (config) {
       reporters: [
         { type: 'html' },
         { type: 'text-summary' },
-        { type: 'lcov', subdir: './' },
+        { type: 'lcovonly' },
+        { type: 'lcov' },
       ],
+      fixWebpackSourcePaths: true,
     },
     reporters: ['progress', 'coverage', 'kjhtml'],
     thresholds: {
