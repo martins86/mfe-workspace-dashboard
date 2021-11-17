@@ -273,11 +273,18 @@ sonar.host.url=https://sonarcloud.io
 sonar.organization=martins86
 sonar.projectName=martins86_mfe-workspace-dashboard
 sonar.projectKey=martins86_mfe-workspace-dashboard
+
 sonar.sources=.
-sonar.inclusions=projects/dashboard/src/**/*
+sonar.sourceEncoding=UTF-8
+
+sonar.inclusions=projects/dashboard/src/app/**/*
 sonar.test.inclusions=**/*.spec.js
-sonar.test.exclusions=
-sonar.javascript.lcov.reportPaths=coverage/dashboard/lcov.info
+sonar.exclusions=**/node_modules/**,**/*.spec.ts
+
+sonar.tests=.
+
+sonar.ts.tslint.configPath=tslint.json
+sonar.typescript.lcov.reportPaths=coverage/dashboard/lcov.info
 ```
 
 ```sh
