@@ -284,9 +284,9 @@ sonar.coverage.exclusions=**/*.js,src/main.ts,src/polyfills.ts,**/*environment*.
 sonar.tests=.
 sonar.test.inclusions=**/*.spec.ts,**/*test.ts
 
-sonar.ts.tslint.configPath=tslint.json
+sonar.typescript.tsconfigPath=tsconfig.json
 
-sonar.typescript.lcov.reportPaths=coverage/dashboard/lcov.info
+sonar.javascript.lcov.reportPaths=coverage/dashboard/lcov.info
 
 ```
 
@@ -295,8 +295,9 @@ sonar.typescript.lcov.reportPaths=coverage/dashboard/lcov.info
 reporters: [
   { type: 'html' },
   { type: 'text-summary' },
-  { type: 'lcov', subdir: './' },
+  { type: 'lcov' },
 ],
+fixWebpackSourcePaths: true,
 ```
 
 ```sh
