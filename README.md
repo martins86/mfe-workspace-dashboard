@@ -276,17 +276,17 @@ sonar.projectName=martins86_mfe-workspace-dashboard
 sonar.projectKey=martins86_mfe-workspace-dashboard
 
 sonar.sourceEncoding=UTF-8
-sonar.sources=.
+sonar.sources=projects
 
-sonar.exclusions=**/node_modules/**
+sonar.exclusions=**/node_modules/**,**/*.js
 sonar.coverage.exclusions=**/*.js,src/main.ts,src/polyfills.ts,**/*environment*.ts,**/*module.ts
 
-sonar.tests=.
+sonar.tests=app
 sonar.test.inclusions=**/*.spec.ts,**/*test.ts
 
 sonar.typescript.tsconfigPath=tsconfig.json
 
-sonar.javascript.lcov.reportPaths=coverage/dashboard/lcov.info
+sonar.javascript.lcov.reportPaths=coverage/lcov.info
 
 ```
 
